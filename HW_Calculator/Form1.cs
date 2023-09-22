@@ -13,19 +13,14 @@ namespace HW_Calculator
     public partial class Form_calculator : Form
     {
         List<Button> buttons;
-        Point pointStart;
-        //double num1, num2;
-        //string input = string.Empty;
-        //char symbol = ' ';
-        //Form_calculator myCalc;
+        Point pointStart;        
         static Size _window = Screen.PrimaryScreen.Bounds.Size;
         int _heigthForm = _window.Height / 3;
         int _widthForm = _window.Width / 4;
         public Form_calculator()
         {
             InitializeComponent();
-            saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";
-            //addChoiceForm();
+            saveFileDialog1.Filter = "Text files(*.txt)|*.txt|All files(*.*)|*.*";            
             buttons = new List<Button>() { btn_clear, btn_erase, btn_exponentiation, btn_percent, btn_multiply, btn_divide, btn_minus, btn_plus, btn_equals, btn_comma, btn_plus_minus, btn_0, btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7, btn_8, btn_9, but_save_res };
             this.MouseDown += Form1_MouseDown;
             this.MouseMove += Form1_MouseMove;
@@ -74,20 +69,7 @@ namespace HW_Calculator
             {
                 OrigWindow.setOriginalButton(button, ((ComboBox)sender).SelectedItem.ToString());
             }
-        }
-
-       
-
-
-
-
-
-
-
-
-
-
-
+        }  
         //Далее функции калькулятора
         private void BtnNumb_Click(object sender, EventArgs e)
         {
